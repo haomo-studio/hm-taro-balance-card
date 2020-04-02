@@ -4,21 +4,24 @@ import Taro, { Component } from '@tarojs/taro';
 import { View, Text, Image } from '@tarojs/components';
 
 import styles from './style.js';
+import layer from './images/img_25821_0_0.png';
+import zhanghaoguanli from './images/img_25821_0_2.png';
+import largeIcon from './images/img_25821_0_1.png';
 
 class HmBalanceCard extends Component {
   constructor(props) {
     super(props);
     let defaultState = {
-      layer: "'./images/img_25821_0_0.png'",
+      layer,
       info: '信用卡余额',
-      zhanghaoguanli: "'./images/img_25821_0_2.png'",
+      zhanghaoguanli,
       bd: '¥12929.05',
       main: '5326 5149 4497 1577',
       date: '日期',
       word: '12/24',
       cvv: 'CVV',
       num: '235',
-      largeIcon: "'./images/img_25821_0_1.png'"
+      largeIcon
     };
     this.state = Object.assign(defaultState, JSON.parse(JSON.stringify(props)));
   }
